@@ -1,0 +1,14 @@
+---
+- name: Install python in target node with ansible
+  hosts: Test
+  become: true
+  gather_facts: no
+  tasks:
+  - name: update packages
+    raw: apt update
+
+  - name: upgrade packages
+    raw: apt upgrade -y
+
+  - name: install python2
+    raw: apt install -y python2 python
