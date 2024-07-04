@@ -1,0 +1,30 @@
+---
+- name: Install python in target node with ansible
+  hosts: Test
+  become: true
+  gather_facts: no
+  tasks:
+  - name: update packages
+    apt:
+      update_cache: yes
+      force_apt_get: yes
+
+  - name: install latest version of mc curl htop
+    apt:
+      name: curl
+      state: latest
+
+  - name: install latest version of mc curl htop
+    apt:
+      name: wget
+      state: latest
+
+  - name: install latest version of mc curl htop
+    apt:
+      name: htop
+      state: latest
+
+  - name: install latest version of mc curl htop
+    apt:
+      name: mc
+      state: latest
