@@ -1,0 +1,6 @@
+[test]
+tacacs ansible_host=172.17.86.49
+
+[test:vars]
+ansible_user=odmin
+ansible_password=Test123456
